@@ -1,13 +1,13 @@
 export const metrics = [
   { value: "Nearly 20", label: "Years of leadership" },
-  { value: "5", label: "Jurisdictions" },
-  { value: "30+", label: "Tax types" },
+  { value: "6", label: "City, state & national programs" },
+  { value: "50+", label: "Tax types" },
 ];
 
 export const impactMetrics = [
   { value: "20", label: "Nearly two decades leading transformation" },
-  { value: "3", label: "City, state, and national programs" },
-  { value: "30+", label: "Tax types implemented" },
+  { value: "6", label: "City, state, and national programs" },
+  { value: "50+", label: "Tax types implemented" },
   { value: "360°", label: "Delivery through production and support" },
 ];
 
@@ -45,7 +45,7 @@ export const experience = [
     role: "Project Manager",
     organization: "Jamaica Tax Administration",
     description:
-      "Led implementation of 30+ tax types, including individual and corporate income tax, plus ongoing production support.",
+      "Led implementation of 50+ tax types, including individual and corporate income tax, plus ongoing production support.",
   },
 ];
 
