@@ -74,10 +74,10 @@ function Header() {
   );
 }
 
-function SectionHeading({ number, label, children }) {
+function SectionHeading({ label, children }) {
   return (
     <div className="section-heading">
-      <p className="section-label">{number} / {label}</p>
+      <p className="section-label">{label}</p>
       <div>{children}</div>
     </div>
   );
@@ -138,7 +138,7 @@ function Hero() {
 
       <section className="section" id="about">
         <div className="container">
-          <SectionHeading number="01" label="About">
+          <SectionHeading label="About">
             <h2>Leadership built for complexity.</h2>
             <div className="about-copy">
               <p>
@@ -169,7 +169,7 @@ function Hero() {
 
       <section className="section" id="experience">
         <div className="container">
-          <SectionHeading number="02" label="Experience">
+          <SectionHeading label="Experience">
             <h2>Experience &amp; impact across jurisdictions.</h2>
             <div className="timeline">
               {experience.map((item) => (
@@ -188,12 +188,11 @@ function Hero() {
 
       <section className="section" id="leadership">
         <div className="container">
-          <SectionHeading number="03" label="Leadership">
+          <SectionHeading label="Leadership">
             <h2>How I lead.</h2>
             <div className="leadership-grid">
               {leadership.map((item) => (
                 <article className="leadership-card" key={item.number}>
-                  <span>{item.number}</span>
                   <div>
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
@@ -207,7 +206,7 @@ function Hero() {
 
       <section className="section" id="insights">
         <div className="container">
-          <SectionHeading number="04" label="Insights">
+          <SectionHeading label="Insights">
             <h2>Leadership lessons from the work.</h2>
             <div className="insights-grid">
               {insights.map((title) => (

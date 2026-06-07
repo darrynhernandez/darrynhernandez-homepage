@@ -452,12 +452,6 @@ blockquote {
   transform: translateY(-5px);
 }
 
-.leadership-card > span {
-  color: var(--blue-soft);
-  letter-spacing: 0.12em;
-  font-size: 11px;
-}
-
 .leadership-card h3,
 .insight-card h3 {
   margin: 0;
