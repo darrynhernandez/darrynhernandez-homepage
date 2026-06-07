@@ -225,7 +225,7 @@ function Footer() {
   return (
     <footer>
       <div className="container footer-inner">
-        <span>Darryn Hernandez · Government Transformation &amp; Program Leadership</span>
+        <span>Darryn Hernandez</span>
         <span>© 2026</span>
       </div>
     </footer>
