@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darryn Hernandez | Government Transformation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+    :root {
+      --ink: #111315;
+      --paper: #f5f1e8;
+      --slate: #8d96a0;
+      --blue: #315bff;
+      --line: rgba(245,241,232,.18);
+      --muted: #b3b7bb;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    .wrap { width: min(1180px, calc(100% - 96px)); margin: auto; }
+    nav {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      letter-spacing: .04em;
+    }
+    .brand { font-size: 14px; font-weight: 600; }
+    .navlinks { display: flex; align-items: center; gap: 28px; font-size: 12px; }
+    .navlinks a { color: var(--paper); text-decoration: none; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 2px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+    .hero { padding: 88px 0 76px; }
+    .eyebrow {
+      color: #9fa8ff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr .65fr;
+      gap: 70px;
+      align-items: end;
+      margin-top: 34px;
+    }
+    h1, h2, .serif {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.025em;
+    }
+    h1 { font-size: clamp(68px, 7.4vw, 112px); line-height: .92; margin: 0; }
+    h1 em { color: var(--slate); font-weight: 400; }
+    .hero-copy { max-width: 620px; color: var(--muted); font-size: 18px; margin: 36px 0 30px; }
+    .actions { display: flex; gap: 24px; align-items: center; }
+    .text-link { color: var(--paper); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid var(--paper); padding-bottom: 4px; }
+    .portrait {
+      position: relative;
+      height: 510px;
+      overflow: hidden;
+      background: #24282c;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; filter: saturate(.78) contrast(1.03); }
+    .portrait:after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
+    .role { margin-top: 16px; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin-top: 78px;
+    }
+    .metric { padding: 28px 0; }
+    .metric + .metric { border-left: 1px solid var(--line); padding-left: 34px; }
+    .metric strong { display: block; font-size: 28px; font-weight: 500; }
+    .metric span { color: var(--slate); font-size: 11px; letter-spacing: .1em; }
+    section { padding: 112px 0; border-bottom: 1px solid var(--line); }
+    .section-grid { display: grid; grid-template-columns: .58fr 1.42fr; gap: 90px; }
+    .section-label { color: var(--slate); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }
+    h2 { font-size: 68px; line-height: .98; margin: 0 0 40px; max-width: 760px; }
+    .about-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; color: #c6c9cc; font-size: 17px; }
+    .quote { margin-top: 56px; padding-left: 28px; border-left: 3px solid var(--blue); font-family: "Instrument Serif", Georgia, serif; font-size: 30px; line-height: 1.2; color: var(--paper); }
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 70px; }
+    .impact { background: var(--ink); padding: 38px 30px 44px; min-height: 190px; }
+    .impact strong { display: block; color: #9fa8ff; font-family: "Instrument Serif", Georgia, serif; font-size: 48px; font-weight: 400; margin-bottom: 30px; }
+    .impact span { color: #c6c9cc; }
+    .timeline { margin-top: 60px; }
+    .job {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 42px;
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+    .job:last-child { border-bottom: 1px solid var(--line); }
+    .date { color: #9fa8ff; font-size: 13px; font-weight: 600; }
+    .job h3 { margin: 0 0 10px; font-size: 20px; font-weight: 500; }
+    .job p { margin: 0; max-width: 740px; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 62px; }
+    .card { background: #191c1f; padding: 34px; min-height: 310px; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-num { color: #9fa8ff; font-size: 12px; letter-spacing: .12em; }
+    .card h3 { font-family: "Instrument Serif", Georgia, serif; font-size: 34px; line-height: 1; font-weight: 400; margin: 0 0 22px; }
+    .card p { color: var(--muted); margin: 0; }
+    .insights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+    .insight { border-top: 1px solid var(--line); padding-top: 22px; min-height: 190px; }
+    .tag { color: #9fa8ff; font-size: 10px; letter-spacing: .13em; }
+    .insight h3 { font-family: "Instrument Serif", Georgia, serif; font-size: 31px; line-height: 1.06; font-weight: 400; margin: 34px 0 0; }
+    .closing { background: var(--paper); color: var(--ink); border: 0; padding: 120px 0; }
+    .closing h2 { font-size: 78px; max-width: 900px; }
+    .closing-row { display: flex; align-items: end; justify-content: space-between; gap: 70px; }
+    .closing p { max-width: 560px; color: #555b61; font-size: 18px; }
+    .placeholder { display: block; color: #6c7176; font-size: 11px; margin-top: 12px; }
+    footer { background: var(--paper); color: #656a6f; border-top: 1px solid #d5d0c6; padding: 28px 0 40px; font-size: 11px; }
+    .footer-row { display: flex; justify-content: space-between; }
+    @media (max-width: 700px) {
+      body { font-size: 14px; }
+      .wrap { width: calc(100% - 38px); }
+      nav { height: 70px; }
+      .navlinks a:not(.button) { display: none; }
+      .navlinks { gap: 0; }
+      .button { min-height: 42px; padding: 0 15px; font-size: 10px; }
+      .hero { padding: 54px 0 52px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; margin-top: 24px; }
+      h1 { font-size: 58px; }
+      .hero-copy { font-size: 16px; margin: 28px 0; }
+      .portrait { height: 390px; }
+      .metrics { margin-top: 52px; }
+      .metric { padding: 20px 6px 20px 0; }
+      .metric + .metric { padding-left: 14px; }
+      .metric strong { font-size: 21px; }
+      .metric span { font-size: 8px; }
+      section { padding: 74px 0; }
+      .section-grid { grid-template-columns: 1fr; gap: 28px; }
+      h2 { font-size: 49px; margin-bottom: 28px; }
+      .about-copy { grid-template-columns: 1fr; gap: 8px; font-size: 15px; }
+      .quote { margin-top: 38px; font-size: 25px; }
+      .impact-grid { grid-template-columns: 1fr 1fr; margin-top: 44px; }
+      .impact { min-height: 150px; padding: 24px 20px; }
+      .impact strong { font-size: 38px; margin-bottom: 20px; }
+      .job { grid-template-columns: 1fr; gap: 10px; padding: 27px 0; }
+      .cards, .insights { grid-template-columns: 1fr; margin-top: 40px; }
+      .card { min-height: 250px; }
+      .closing { padding: 82px 0; }
+      .closing h2 { font-size: 52px; }
+      .closing-row { display: block; }
+      .closing .button { margin-top: 28px; }
+      .footer-row { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">DARRYN HERNANDEZ</div>
+      <div class="navlinks">
+        <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#leadership">LEADERSHIP</a><a href="#insights">INSIGHTS</a>
+        <a class="button" href="#">CONNECT ON LINKEDIN</a>
+      </div>
+    </nav>
+  </div>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Public-sector transformation leader</div>
+      <div class="hero-grid">
+        <div>
+          <h1>Complex programs.<br><em>Clear direction.</em><br>Lasting public impact.</h1>
+          <p class="hero-copy">I lead large-scale tax and revenue modernization programs from definition through rollout, production, and long-term support—aligning teams, stakeholders, and execution across complex environments.</p>
+          <div class="actions"><a class="button" href="#">CONNECT ON LINKEDIN</a><a class="text-link" href="#experience">EXPLORE EXPERIENCE</a></div>
+        </div>
+        <div>
+          <div class="portrait"><img src="darryn-portrait.jpg" alt="Portrait of Darryn Hernandez"></div>
+          <div class="role">Darryn Hernandez · Program Leader in Government Transformation</div>
+        </div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><strong>Nearly 20</strong><span>YEARS OF LEADERSHIP</span></div>
+        <div class="metric"><strong>5</strong><span>JURISDICTIONS</span></div>
+        <div class="metric"><strong>30+</strong><span>TAX TYPES</span></div>
+      </div>
+    </div>
+  </header>
+  <section id="about">
+    <div class="wrap section-grid">
+      <div class="section-label">01 / About</div>
+      <div>
+        <h2>Leadership built for complexity.</h2>
+        <div class="about-copy">
+          <p>Over nearly two decades, I’ve led large-scale tax system implementations across city, state, and national jurisdictions.</p>
+          <p>My focus is turning complex programs into clear plans, aligned teams, and reliable execution—improving operations and outcomes for organizations and the citizens they serve.</p>
+        </div>
+        <div class="quote">“Structure, clarity, and ownership are what move difficult programs forward.”</div>
+      </div>
+    </div>
+    <div class="wrap impact-grid">
+      <div class="impact"><strong>20</strong><span>Nearly two decades leading transformation</span></div>
+      <div class="impact"><strong>3</strong><span>City, state, and national programs</span></div>
+      <div class="impact"><strong>30+</strong><span>Tax types implemented</span></div>
+      <div class="impact"><strong>360°</strong><span>Delivery through production and support</span></div>
+    </div>
+  </section>
+  <section id="experience">
+    <div class="wrap section-grid">
+      <div class="section-label">02 / Experience</div>
+      <div>
+        <h2>Experience &amp; impact across jurisdictions.</h2>
+        <div class="timeline">
+          <article class="job"><div class="date">2025—PRESENT</div><div><h3>Program Manager | Netherlands Tax Administration (Belastingdienst)</h3><p>Leading a multi-year national VAT modernization program across multiple rollouts, governance, quality, risk, and executive alignment.</p></div></article>
+          <article class="job"><div class="date">2023—2025</div><div><h3>Project Manager | City of New Orleans, Bureau of Revenue</h3><p>Directed implementation of a modern revenue system spanning 20+ tax types, licenses, and permits, then led production support.</p></div></article>
+          <article class="job"><div class="date">2019—2023</div><div><h3>Project Manager | New Mexico Taxation and Revenue Department</h3><p>Managed multiple tax-program rollouts, governance, stakeholder communication, risk, timelines, and budget.</p></div></article>
+          <article class="job"><div class="date">2017—2019</div><div><h3>Project Manager | Louisville Metro Revenue Commission</h3><p>Delivered Occupational License Tax implementations and led transition into production support.</p></div></article>
+          <article class="job"><div class="date">2014—2017</div><div><h3>Project Manager | Jamaica Tax Administration</h3><p>Led implementation of 30+ tax types, including individual and corporate income tax, plus ongoing production support.</p></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="leadership">
+    <div class="wrap section-grid">
+      <div class="section-label">03 / Leadership</div>
+      <div>
+        <h2>How I lead.</h2>
+        <div class="cards">
+          <article class="card"><div class="card-num">01</div><div><h3>Clarity in Complexity</h3><p>Translate complex programs into actionable plans teams can execute with confidence.</p></div></article>
+          <article class="card"><div class="card-num">02</div><div><h3>Team Development</h3><p>Build accountable teams and develop individuals into future leaders.</p></div></article>
+          <article class="card"><div class="card-num">03</div><div><h3>Execution with Ownership</h3><p>Drive alignment, accountability, and follow-through across stakeholders and delivery teams.</p></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="insights">
+    <div class="wrap section-grid">
+      <div class="section-label">04 / Insights</div>
+      <div>
+        <h2>Leadership lessons from the work.</h2>
+        <div class="insights">
+          <article class="insight"><span class="tag">INSIGHT / COMING SOON</span><h3>Leading Through Ambiguity</h3></article>
+          <article class="insight"><span class="tag">INSIGHT / COMING SOON</span><h3>Why Program Clarity Matters</h3></article>
+          <article class="insight"><span class="tag">INSIGHT / COMING SOON</span><h3>Building Teams That Own the Outcome</h3></article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="closing">
+    <div class="wrap">
+      <h2>Transformation succeeds when people can see the path forward.</h2>
+      <div class="closing-row">
+        <p>I help organizations bring clarity, alignment, and disciplined execution to their most consequential programs.</p>
+        <div><a class="button" href="#">CONNECT ON LINKEDIN</a><span class="placeholder">linkedin.com/in/your-profile</span></div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="wrap footer-row"><span>Darryn Hernandez · Government Transformation &amp; Program Leadership</span><span>© 2026</span></div></footer>
+</body>
+</html>
