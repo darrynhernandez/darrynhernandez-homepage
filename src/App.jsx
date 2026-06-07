@@ -8,7 +8,7 @@ import {
 } from "./data";
 import portrait from "../darryn-portrait.jpg";
 
-const linkedInUrl = "#";
+const linkedInUrl = "https://www.linkedin.com/in/darryn-hernandez";
 
 function ArrowIcon() {
   return (
@@ -23,9 +23,8 @@ function LinkedInButton({ light = false, compact = false }) {
     <a
       className={`button${light ? " button--light" : ""}${compact ? " button--compact" : ""}`}
       href={linkedInUrl}
-      onClick={(event) => {
-        if (linkedInUrl === "#") event.preventDefault();
-      }}
+      target="_blank"
+      rel="noreferrer"
       aria-label="Connect with Darryn Hernandez on LinkedIn"
     >
       Connect on LinkedIn
@@ -232,7 +231,7 @@ function Hero() {
             </p>
             <div className="closing-action">
               <LinkedInButton light />
-              <span>linkedin.com/in/your-profile</span>
+              <span>linkedin.com/in/darryn-hernandez</span>
             </div>
           </div>
         </div>
