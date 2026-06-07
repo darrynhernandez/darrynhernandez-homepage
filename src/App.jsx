@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import {
   experience,
   impactMetrics,
-  insights,
   leadership,
   metrics,
 } from "./data";
@@ -66,7 +65,6 @@ function Header() {
           <a href="#about" onClick={closeMenu}>About</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#leadership" onClick={closeMenu}>Leadership</a>
-          <a href="#insights" onClick={closeMenu}>Insights</a>
           <LinkedInButton compact />
         </nav>
       </div>
@@ -197,22 +195,6 @@ function Hero() {
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                   </div>
-                </article>
-              ))}
-            </div>
-          </SectionHeading>
-        </div>
-      </section>
-
-      <section className="section" id="insights">
-        <div className="container">
-          <SectionHeading label="Insights">
-            <h2>Leadership lessons from the work.</h2>
-            <div className="insights-grid">
-              {insights.map((title) => (
-                <article className="insight-card" key={title}>
-                  <p>Insight / Coming soon</p>
-                  <h3>{title}</h3>
                 </article>
               ))}
             </div>

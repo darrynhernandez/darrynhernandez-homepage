@@ -183,8 +183,7 @@ img {
 
 .eyebrow,
 .section-label,
-.hero-metric span,
-.insight-card > p {
+.hero-metric span {
   color: var(--blue-soft);
   text-transform: uppercase;
   letter-spacing: 0.13em;
@@ -203,8 +202,7 @@ img {
 h1,
 h2,
 .timeline h3,
-.leadership-card h3,
-.insight-card h3 {
+.leadership-card h3 {
   text-wrap: balance;
 }
 
@@ -452,8 +450,7 @@ blockquote {
   transform: translateY(-5px);
 }
 
-.leadership-card h3,
-.insight-card h3 {
+.leadership-card h3 {
   margin: 0;
   font-family: var(--display);
   font-size: 34px;
@@ -464,29 +461,6 @@ blockquote {
 .leadership-card p {
   margin: 22px 0 0;
   color: var(--muted);
-}
-
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 60px;
-}
-
-.insight-card {
-  min-height: 190px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-}
-
-.insight-card > p {
-  margin: 0 0 34px;
-  font-size: 9px;
-}
-
-.insight-card h3 {
-  font-size: 31px;
-  line-height: 1.06;
 }
 
 .closing {
@@ -757,18 +731,13 @@ footer {
     font-size: 17px;
   }
 
-  .leadership-grid,
-  .insights-grid {
+  .leadership-grid {
     grid-template-columns: 1fr;
     margin-top: 40px;
   }
 
   .leadership-card {
     min-height: 250px;
-  }
-
-  .insight-card {
-    min-height: 150px;
   }
 
   .closing {
