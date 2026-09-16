@@ -141,8 +141,8 @@ function Hero() {
             <div className="about-copy">
               <p>
                 For 20 years, I’ve supported and led tax and revenue
-                modernization across city, state, and national jurisdictions—
-                from implementation to stable, high-performing production
+                modernization across city, state, and national jurisdictions—from
+                implementation to stable, high-performing production
                 operations.
               </p>
               <p>
