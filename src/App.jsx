@@ -86,7 +86,7 @@ function Hero() {
     <main id="top">
       <section className="hero">
         <div className="container">
-          <p className="eyebrow">Public-sector transformation leader</p>
+          <p className="eyebrow">Public-sector revenue modernization leader</p>
           <div className="hero-grid">
             <div className="hero-content">
               <h1>
@@ -95,10 +95,10 @@ function Hero() {
                 Lasting public impact.
               </h1>
               <p className="hero-copy">
-                I lead large-scale tax and revenue modernization programs from
-                definition through rollout, production, and long-term support,
-                aligning teams, stakeholders, and execution across complex
-                environments.
+                I lead complex tax and revenue modernization programs from
+                implementation through go-live, production, and long-term
+                support—aligning teams, stakeholders, and execution across
+                demanding public-sector environments.
               </p>
               <div className="hero-actions">
                 <LinkedInButton />
@@ -140,13 +140,15 @@ function Hero() {
             <h2>Leadership built for complexity.</h2>
             <div className="about-copy">
               <p>
-                Over nearly two decades, I’ve led large-scale tax system
-                implementations across city, state, and national jurisdictions.
+                For 20 years, I’ve supported and led tax and revenue
+                modernization across city, state, and national jurisdictions—
+                from implementation to stable, high-performing production
+                operations.
               </p>
               <p>
                 My focus is turning complex programs into clear plans, aligned
-                teams, and reliable execution, improving operations and
-                outcomes for organizations and the citizens they serve.
+                teams, and reliable execution that improves operations and the
+                experience of the citizens they serve.
               </p>
             </div>
             <blockquote>

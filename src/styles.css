@@ -518,10 +518,6 @@ footer {
     gap: 18px;
   }
 
-  .site-nav > a:not(.button) {
-    display: none;
-  }
-
   .hero-grid {
     grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.65fr);
     gap: 44px;
